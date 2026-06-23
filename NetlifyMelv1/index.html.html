@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Content Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="board-container">
+        <header class="board-header">
+            <div class="profile-avatar">
+                <i class="fas fa-cubes"></i> </div>
+            <h1 class="board-title">Workspace Directory</h1>
+            <p class="board-subtitle">Access all team training resources, copy scripts, and asset folders below.</p>
+        </header>
+
+        <main class="board-grid">
+            
+            <div class="board-tile folder-tile" data-type="folder">
+                <div class="tile-icon"><i class="fas fa-folder"></i></div>
+                <div class="tile-content">
+                    <h3>Onboarding Guides</h3>
+                    <p>3 items</p>
+                </div>
+                <div class="tile-arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="board-tile text-tile" data-copy="Hey! Here is the asset link you requested: https://example.com">
+                <div class="tile-icon"><i class="fas fa-copy"></i></div>
+                <div class="tile-content">
+                    <h3>Sales Intro Script</h3>
+                    <p>Tap to copy to clipboard</p>
+                </div>
+                <span class="copy-badge">Copied!</span>
+            </div>
+
+            <a href="https://example.com" target="_blank" class="board-tile link-tile">
+                <div class="tile-icon"><i class="fas fa-link"></i></div>
+                <div class="tile-content">
+                    <h3>Product Catalog</h3>
+                    <p>View live web store</p>
+                </div>
+                <div class="tile-external"><i class="fas fa-external-link-alt"></i></div>
+            </a>
+
+            <a href="#" class="board-tile doc-tile">
+                <div class="tile-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="tile-content">
+                    <h3>Q3 Strategy Roadmap.pdf</h3>
+                    <p>Download Resource</p>
+                </div>
+                <div class="tile-external"><i class="fas fa-download"></i></div>
+            </a>
+
+            <a href="https://youtube.com" target="_blank" class="board-tile video-tile">
+                <div class="tile-icon"><i class="fab fa-youtube"></i></div>
+                <div class="tile-content">
+                    <h3>Video Walkthrough</h3>
+                    <p>Watch system overview</p>
+                </div>
+                <div class="tile-external"><i class="fas fa-play"></i></div>
+            </a>
+
+        </main>
+
+        <footer class="board-footer">
+            <p>Powered by your custom Netlify Board</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

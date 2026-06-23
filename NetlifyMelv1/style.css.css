@@ -1,0 +1,201 @@
+/* --- CSS Reset & Variables --- */
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --radius: 16px;
+    --transition: all 0.25s ease;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #60a5fa;
+    --accent-hover: #3b82f6;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Layout Container --- */
+.board-container {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* --- Theme Toggle --- */
+.theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* --- Header Profile Card --- */
+.board-header {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 32px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.board-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.board-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Grid of Content Tiles --- */
+.board-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.board-tile {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+.board-tile:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+/* Icons */
+.tile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+/* Context styling based on type */
+.folder-tile .tile-icon { background: rgba(234, 179, 8, 0.15); color: #eab308; }
+.text-tile .tile-icon { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.link-tile .tile-icon { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.doc-tile .tile-icon { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+.video-tile .tile-icon { background: rgba(220, 38, 38, 0.15); color: #dc2626; }
+
+.tile-content {
+    flex-grow: 1;
+}
+
+.tile-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.tile-content p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.tile-arrow, .tile-external {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Copy Confirmation Badge */
+.copy-badge {
+    position: absolute;
+    right: 20px;
+    background: #10b981;
+    color: white;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.copy-badge.show {
+    opacity: 1;
+}
+
+/* --- Footer --- */
+.board-footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+}

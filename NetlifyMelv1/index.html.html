@@ -1,82 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Content Board</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Metabolism & Hormone Optimization | Protocol Health Club</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons for modern interactive UI indicators -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <div class="theme-toggle-container">
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+<body>
+    <!-- Floating Sun/Moon Theme Toggle -->
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
             <i class="fas fa-moon"></i>
         </button>
     </div>
 
+    <!-- Centered Premium Mobile-Style Container -->
     <div class="board-container">
+        
+        <!-- 1. Profile Header Card -->
         <header class="board-header">
-            <div class="profile-avatar">
-                <i class="fas fa-cubes"></i> </div>
-            <h1 class="board-title">Workspace Directory</h1>
-            <p class="board-subtitle">Access all team training resources, copy scripts, and asset folders below.</p>
+            
+            <h1 class="profile-title">LET’S FIX YOUR METABOLISM & OPTIMIZE YOUR HORMONES! 🧬</h1>
+            
+            <div class="avatar-container">
+                <img src="assets/image.png" alt="Protocol Health Club Medical Director" class="profile-avatar-img">
+                <div class="online-indicator" title="Medical Team Online"></div>
+            </div>
+            
+            <p class="profile-subtitle">Are you struggling with fat loss, putting on muscle, slow metabolism, low energy levels, poor sleep, or deep food cravings?</p>
         </header>
 
+        <!-- Asymmetric Content Grid -->
         <main class="board-grid">
             
-            <div class="board-tile folder-tile" data-type="folder">
-                <div class="tile-icon"><i class="fas fa-folder"></i></div>
-                <div class="tile-content">
-                    <h3>Onboarding Guides</h3>
-                    <p>3 items</p>
+            <!-- 2. Primary Call-To-Action Button (Full-Width, Styled Boldly) -->
+            <a href="#panel-labs" class="board-tile tile-full cta-tile primary-cta">
+                <div class="cta-inner">
+                    <div class="cta-content">
+                        <span class="cta-emoji">🧬</span>
+                        <span class="cta-text">25% off Metabolic & hormone optimization panel + free consult</span>
+                    </div>
+                    <div class="cta-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
-                <div class="tile-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="cta-glow-effect"></div>
+            </a>
+
+            <!-- 3. Section Header Card (Full-Width) -->
+            <div class="board-tile tile-full section-header-tile">
+                <h2 class="section-card-title">IT’S TIME TO STOP GUESSING WHY YOU DON’T FEEL YOUR BEST</h2>
+                <div class="section-card-divider"></div>
+                <p class="section-card-content">Get comprehensive labs with my team today to understand exactly what's happening inside your body: Hormone levels, Nutrient deficiencies, Inflammation, Recovery, and Overall wellness.</p>
             </div>
 
-            <div class="board-tile text-tile" data-copy="Hey! Here is the asset link you requested: https://example.com">
-                <div class="tile-icon"><i class="fas fa-copy"></i></div>
-                <div class="tile-content">
-                    <h3>Sales Intro Script</h3>
-                    <p>Tap to copy to clipboard</p>
+           
+            <!-- 4. Secondary Call-To-Action Button (Full-Width) -->
+            <a href="#panel-labs" class="board-tile tile-full cta-tile secondary-cta">
+                <div class="cta-inner">
+                    <div class="cta-content">
+                        <span class="cta-emoji">🧬</span>
+                        <span class="cta-text">25% off Metabolic & hormone optimization panel + free consult</span>
+                    </div>
+                    <div class="cta-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 5. Video Component Card (Full-Width) -->
+            <div class="board-tile tile-full video-tile">
+                <div class="video-overlay-bg"></div>
+                <div class="video-card-content">
+                    <div class="video-play-btn" aria-label="Play Overview Video">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-text-group">
+                        <span class="video-badge">Protocol Walkthrough</span>
+                        <h3 class="video-title">Learn How We Optimize Your Health</h3>
+                    </div>
                 </div>
                 <span class="copy-badge">Copied!</span>
             </div>
 
-            <a href="https://example.com" target="_blank" class="board-tile link-tile">
-                <div class="tile-icon"><i class="fas fa-link"></i></div>
-                <div class="tile-content">
-                    <h3>Product Catalog</h3>
-                    <p>View live web store</p>
+            <!-- 6. "How does it work?" & "Who is this for?" (Two-Column Split Row) -->
+            <!-- Card Left: How it works -->
+            <div class="board-tile tile-half split-info-card how-it-works">
+                <div class="info-card-header">
+                    <div class="info-card-icon-circle bg-teal">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3 class="info-card-title">How does it work?</h3>
                 </div>
-                <div class="tile-external"><i class="fas fa-external-link-alt"></i></div>
-            </a>
+                <div class="info-card-body">
+                    <div class="steps-flow">
+                        <div class="step-item">
+                            <span class="step-num">1</span>
+                            <span class="step-text"><strong>Purchase labs</strong> (get 25% off first lab + free consult)</span>
+                        </div>
+                        <div class="step-arrow-divider"><i class="fas fa-chevron-down"></i></div>
+                        <div class="step-item">
+                            <span class="step-num">2</span>
+                            <span class="step-text"><strong>Get bloodwork</strong> at local facility (all 50 states)</span>
+                        </div>
+                        <div class="step-arrow-divider"><i class="fas fa-chevron-down"></i></div>
+                        <div class="step-item">
+                            <span class="step-num">3</span>
+                            <span class="step-text"><strong>60-min review</strong> with medical staff, going over every detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <a href="#" class="board-tile doc-tile">
-                <div class="tile-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="tile-content">
-                    <h3>Q3 Strategy Roadmap.pdf</h3>
-                    <p>Download Resource</p>
+            <!-- Card Right: Who is this for -->
+            <div class="board-tile tile-half split-info-card who-is-this-for">
+                <div class="info-card-header">
+                    <div class="info-card-icon-circle bg-blue">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="info-card-title">Who is this for?</h3>
                 </div>
-                <div class="tile-external"><i class="fas fa-download"></i></div>
-            </a>
+                <div class="info-card-body">
+                    <p class="info-card-paragraph">Once you get over 30, your body changes — your energy, recovery, metabolism, focus, hormones, sleep… all of it starts shifting.</p>
+                    <p class="info-card-paragraph mt-8">And for me, I never want to guess when it comes to my health or performance. That’s why I helped start <strong>Protocol Health Club</strong>.</p>
+                </div>
+            </div>
 
-            <a href="https://youtube.com" target="_blank" class="board-tile video-tile">
-                <div class="tile-icon"><i class="fab fa-youtube"></i></div>
-                <div class="tile-content">
-                    <h3>Video Walkthrough</h3>
-                    <p>Watch system overview</p>
+            <!-- 7. Interactive FAQ Accordion/Expandable Stack (Full-Width Rows) -->
+            <div class="accordion-section-header">
+                <h3 class="accordion-section-label">Medical &amp; Optimization Insights</h3>
+            </div>
+
+            <!-- Accordion 1 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">Why you need to review labs with trained medical staff?</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
                 </div>
-                <div class="tile-external"><i class="fas fa-play"></i></div>
-            </a>
+
+                <div class="accordion-content">
+                    <p class="accordion-text">Bloodwork results are highly complex and interdependent. A trained medical professional understands that being "within normal range" does not mean you are optimized for peak performance or vitality. They analyze the fine nuances of your biomarkers—such as hormone ratios, inflammatory markers, and nutrient levels—to design a safe, customized, and highly effective optimization plan tailored specifically to your unique biology.</p>
+                </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">Who is Protocol Health Club?</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">It is my team of trained medical staff. They review your labs, and provide treatments around peptide and hormone replacement therapies. They work behind many of the biggest health and fitness coaches in the industry.</p>
+                </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">What is Guided Optimization &amp; Concierge Telehealth?</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">White glove concierge treatment, where medical staff provides 24/7 support for peptide and hormone optimization.</p>
+                </div>
+            </div>
+
+            <!-- Accordion 4 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">How can Guided Optimization help me?</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text-lead">By aligning your biomarkers to optimal physiological baseline values, you can expect significant, compounding quality-of-life benefits:</p>
+                    <ul class="benefits-grid">
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Increased energy</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Accelerate fat loss</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Faster muscle repair</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Reduced inflammation</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Improved skin</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Better sleep</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Mood/focus</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Bone density</li>
+                        <li><span class="benefit-check"><i class="fas fa-check"></i></span> Libido</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion 5 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">What are peptides?</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Peptides are short chains of amino acids that act as precise signaling molecules in the body, instructing cells to perform specific vital functions. By introducing targeted peptides, you can safely trigger natural physiological pathways to accelerate fat loss, speed up muscle recovery, enhance cognitive function, stimulate tissue repair, reduce inflammation, and support long-term cellular longevity.</p>
+                </div>
+            </div>
+
+            <!-- Accordion 6 -->
+            <div class="board-tile tile-full accordion-card" tabindex="0">
+                <div class="accordion-header">
+                    <h4 class="accordion-title">What is HRT? (Hormone Replacement Therapy?)</h4>
+                    <span class="accordion-toggle-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Hormone Replacement Therapy (HRT) is a medically supervised treatment designed to restore key hormone levels—such as testosterone, estrogen, progesterone, or thyroid hormones—back to their optimal, youthful ranges. As we age, our natural hormone production declines, leading to a sluggish metabolism, muscle loss, constant fatigue, and mood shifts. HRT safely rebalances these systems to restore energy, vitality, mental clarity, and body composition.</p>
+                </div>
+            </div>
 
         </main>
 
+        <!-- Board Footer -->
         <footer class="board-footer">
-            <p>Powered by your custom Netlify Board</p>
+            <p class="footer-text">Powered by Protocol Health Club &copy; 2026</p>
         </footer>
+        
     </div>
 
+    <!-- Theme and Interactive Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
